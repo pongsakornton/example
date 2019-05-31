@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="row m-2">
+    <div class="col-6">
+     
+      <div id="bc" class="jumbotron ">
+          <label for="text-bc">Currency : {{currency}} </label>
+          <h2 id="text-bc">Price : {{bc.ask}} </h2>
+      </div>
+    </div>
+    <div class="col-6"> 
+      <div class="row">
+        <div class="col">
+            <label for="select-bitcoin">Select : </label>
+            <select id="select-bitcoin" [(ngModel)]="currency" (change)="getBitcoin()" class="form-control">
+                <option value="GBP" selected >GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+            </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

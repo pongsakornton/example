@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <h2>Profile</h2>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>My name : {{name}}</p>
+      <p>Age : {{age}}</p>
+      <p>Email : {{email}}</p>
+      <p>Skill : {{skill}}</p>
+      <p>img url : {{imgUrl}}</p>
+    </div>
+    <div class="col-6">
+      <img [src]="imgUrl" width="250px" >
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-12">
+      <label for="name">Input Name : </label>
+      <input type="text" id="name" class="form-control" [(ngModel)]="name" [placeholder]="placeholderName">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="url">Input URL : </label>
+      <input type="text" id="url" class="form-control" [(ngModel)]="imgUrl" placeholder="url">
+    </div>
+  </div>
+  <div class="row">
+      <div class="col">
+        <label for="age">Input Age : </label>
+        <input type="number" id="age" class="form-control" [(ngModel)]="age" placeholder="age">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <label for="email">Input Email : </label>
+          <input type="text" id="email" class="form-control" [(ngModel)]="email" placeholder="email">
+        </div>
+    </div>
+    <div class="row">
+          <div class="col">
+            <label for="skill">Input Skill : </label>
+            <input type="text" id="skill" class="form-control" [(ngModel)]="skill" placeholder="skill">
+          </div>
+    </div>
+    <hr/>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-danger" (click)="onReset()">Reset</button>
+  </div>
+</div>
+</div>

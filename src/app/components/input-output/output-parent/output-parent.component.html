@@ -1,0 +1,7 @@
+<div class="card text-center bg-warning ">
+    <p>Parent Component</p>
+    <div class="card-body">
+      <p>{{message}}</p>
+      <app-output-child (emitMessage)="onOutput($event)"></app-output-child>
+    </div>
+  </div>

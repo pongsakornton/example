@@ -1,0 +1,7 @@
+<div class="card text-center bg-danger ">
+  <p>Parent Component</p>
+  <div class="card-body">
+    <input type="text" class="form-control mb-2"  [(ngModel)]="parentMessage" >
+    <app-input-child [message]='parentMessage' ></app-input-child>
+  </div>
+</div>

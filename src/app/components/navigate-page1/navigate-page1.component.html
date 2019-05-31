@@ -1,0 +1,10 @@
+<div class="container"> 
+  <div class="row">
+    <div class="col">
+      <h2>Page 1</h2>
+      <hr>
+      <input type="text" class="form-control mb-3" [(ngModel)]="message">
+      <button type="button" class="btn btn-info" [routerLink]="['/navigate-page2']" [queryParams]="{text:message}">Go</button>
+    </div>
+  </div>
+</div>

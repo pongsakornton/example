@@ -1,0 +1,37 @@
+<div class="container">
+  
+    <div class="row m-3">
+      <div class="col-6">
+        <div class="from-group">
+          <input type="text" 
+                  class="form-control"
+                  placeholder="input calss"
+                  [(ngModel)]="inputClass">
+        </div>
+        <br/>
+        <button class="btn" [ngClass]="allMyClass" (click)="setAllMyCalss()">Click Change Button Color</button>
+      </div>
+      <p>Try :</p>
+      <ul>
+          <li><p class="text-primary">.text-primary</p></li>
+          <li><p class="text-secondary">.text-secondary</p></li>
+          <li><p class="text-success">.text-success</p></li>
+          <li><p class="text-danger">.text-danger</p></li>
+          <li><p class="text-warning">.text-warning</p></li>
+          <li><p class="text-info">.text-info</p></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="jumbotron text-center " [ngClass]="bgColor">
+        <h2 [ngClass]="inputClass">Ng Class</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="col">
+      <h3>Ng Style</h3>
+        <div *ngFor="let item of people" class="m-4" >
+          <h5 [ngStyle]="{'color' : item.country == 'USA'?'red':'green' }" >{{item.name}}</h5>
+        </div>
+    
+      </div>
+  </div>
